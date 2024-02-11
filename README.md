@@ -163,9 +163,11 @@ $ python3 ispindel-http-server.py
 See the extras folder for a systemd startup script, but please remember to customise to whereever you decide to install the script.
 
 ## Appendix A: Basic Plotting
-A GNU Plot example for basic charting is available under extras directory. To use:
+A GNU Plot example for basic charting is available under extras directory. 
+To use:
 ```gnuplot -p ispindel.gnuplot```
 Example output:
+
 ![a gnu plot example of an ispindel session](./images/ispindel-gnuplot.png)
 
 ## Appendix B: iSpindel calibration
@@ -175,13 +177,14 @@ First, ensure your iSpindel is calibrated to 25 degrees in water.
 When done, ensure you have a hydrometer (not a refractometer!) and a notebook to take readings over the next days / weeks.
 
 Then put together a basic recipe for a calibration sugar wash:
+
 **Ingredients for a 1.090SG / 21.57 Brix / 12.14% ABV wash**
 - 705.39g caster sugar (finer, so dilutes faster)
 - Water, topped up to make 3L
 - Yeast nutrient
 - Any fast yeast: 
--- Killer yeast such as EC1118 (cheap, flexible, aggressive, good restarter)
--- Kveik yeast (needs heat, but will ferment out in days)
--- Turbo yeasts (high alcohol potential)
+  - Killer yeast such as EC1118 (cheap, flexible, aggressive, good restarter)
+  - Kveik yeast (needs heat, but will ferment out in days)
+  - Turbo yeasts (high alcohol potential)
 
-If this goes too slow, see the (Birdwatchers Sugar Wash)[https://birdwatchers.info/instructions/] for a highly calibrated fermentable solution. Most yeasts come with additives / nutrients to aid the yeast with initial growth anyway.
+If this goes too slow, see the [Birdwatchers Sugar Wash](https://birdwatchers.info/instructions/) for a highly calibrated fermentable solution. Most yeasts come with additives / nutrients to aid the yeast with initial growth anyway.
