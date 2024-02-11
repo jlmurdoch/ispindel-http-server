@@ -1,0 +1,9 @@
+[Unit]
+Description=iSpindel HTTP Server
+
+[Service]
+ExecStart=/opt/ispindel-http-server/ispindel-http-server.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
