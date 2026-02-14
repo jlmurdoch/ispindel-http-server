@@ -188,3 +188,26 @@ Then put together a basic recipe for a calibration sugar wash:
   - Turbo yeasts (high alcohol potential)
 
 If this goes too slow, see the [Birdwatchers Sugar Wash](https://birdwatchers.info/instructions/) for a highly calibrated fermentable solution. Most yeasts come with additives / nutrients to aid the yeast with initial growth anyway.
+
+## Appendix C: Non Access Point deployment in 2026
+Quickstart guide to a basic deployment without the Access Point for the iSpindel, just the display service:
+
+1. Install Raspberry Pi OS Lite onto an SD Card
+2. Update: `sudo apt update && sudo apt upgrade`
+3. Install Python libs: `sudo apt install git python3-pil python3-numpy`
+4. Enable SPI: `sudo raspi-config nonint do_spi 0`
+5. Download this repo into /opt:
+    ```
+    cd /opt
+    sudo git clone https://github.com/jlmurdoch/ispindel-http-server.git
+    cd ispindel-http-server/
+    sudo chmod +x ispindel-http-server.py 
+    ```
+6. Test the main script: `sudo ./ispindel-http-server.py`
+7. If `lgpio.error: 'GPIO not allocated'` is seen, swap out the GPIO libs:
+    ```
+    sudo apt remove python3-rpi-lgpio
+    sudo apt install python3-rpi.gpio
+    ```
+8. Install the service: `sudo cp extras/ispindel.service /etc/systemd/system/`
+9. Switch it on: `sudo systemctl enable ispindel.service`
